@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Hugo Vinicius">
+
+    <title>{{title}}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Gugi|Montserrat|Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">    
+    <link rel="stylesheet" href="./stylesheets/style.css">     
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./images/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#6C63FF">
+    <meta name="theme-color" content="#6C63FF">
+
+    <link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>   
+    {{> menu }}
+    {{{body}}}
+
+    <!-- Optional JavaScript -->
+    <script src="./javascripts/sw-register.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./javascripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="./javascripts/popper.min.js"></script>
+    <script src="./javascripts/bootstrap.min.js"></script>
+  </body>
+</html>

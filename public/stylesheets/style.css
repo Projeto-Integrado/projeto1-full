@@ -1,0 +1,146 @@
+body,
+input {
+    font-family: "Titillium Web", sans-serif;
+    color: rgb(28, 29, 30);
+}
+
+.borda-especial {
+    border-radius: 10px;
+}
+
+.navbar-brand {
+    font-family: Gugi, cursive;
+}
+
+.nav-item {
+    padding-top: 0px;
+    padding-right: 16px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.btn.btn-base-primary {
+    background-color: rgb(83, 0, 255);
+    color: rgb(255, 255, 255);
+}
+
+.btn.btn-base-primary:hover {
+    background-color: rgb(79, 7, 227);
+}
+
+.input-group.mb-3.mx-auto.mt-3 {
+    width: 50%;
+}
+
+.container-fluid.mt-5.mb-5 {
+    margin-top: 48px;
+    margin-right: 0px;
+    margin-bottom: 58px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 15px;
+    padding-bottom: 65px;
+    padding-left: 15px;
+}
+
+.signup-newsletter {
+    width: 50%;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+.card-title {
+    font-weight: 700;
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.cta {
+    padding-top: 8rem;
+    padding-right: 0px;
+    padding-bottom: 8rem;
+    padding-left: 0px;
+}
+
+.bg-blue {
+    background-color: rgb(247, 248, 253);
+    background-image: radial-gradient(604.29px at 50% 0px, rgb(251, 252, 255) 0px, rgb(234, 237, 251) 100%);
+}
+
+.pt-4 {
+    text-align: center;
+}
+
+.testimonials .testimonial-item img {
+    max-width: 12rem;
+    box-shadow: rgb(173, 181, 189) 0px 5px 5px 0px;
+}
+
+.testimonials .testimonial-item {
+    max-width: 18rem;
+}
+
+.testimonial-item {
+    text-align: center;
+}
+
+.display-2 {
+    color: rgb(108, 99, 255);
+}
+
+.pt-4.my-md-5.pt-md-5.border-top {
+    color: rgb(175, 193, 211);
+}
+
+.img-fluid.rounded-circle.mb-3 {
+    width: 252px;
+    height: 258px;
+}
+
+.pt-5 {
+    padding: 30px 0 0 0;
+}
+
+.c5796 {
+    display: inline !important;
+}
+
+.c5779 {
+    background-color: rgb(248, 249, 250);
+    display: inline !important;
+}
+
+@media (max-width: 992px) {
+    .input-group.mb-3.mx-auto.mt-3 {
+        width: 75%;
+    }
+    .display-4 {
+        font-size: 51px;
+    }
+    .lead {
+        font-size: 18px;
+    }
+    .signup-newsletter {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-group.mb-3.mx-auto.mt-3 {
+        width: 100%;
+    }
+    .display-4 {
+        font-size: 34px;
+    }
+    .lead {
+        font-size: 16px;
+    }
+    .signup-newsletter {
+        width: 100%;
+    }
+}
