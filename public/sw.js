@@ -4,7 +4,6 @@ const offlineFallbackPage = "ToDo-replace-this-name.html";
 
 let cached_assets = [
     '/',
-    'index.hbs',
     '/stylesheets/font-awesome.min.css',
     '/stylesheets/style.css',
     '/javascripts/jquery-3.3.1.slim.min.js',
