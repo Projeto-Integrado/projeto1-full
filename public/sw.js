@@ -1,5 +1,9 @@
 var urlsToCache_ = [
     '/#/',
+    'index.html',
+    'sobre.html',
+    'calculadora.html',
+    'login.html',
     '/stylesheets/font-awesome.min.css',
     '/stylesheets/style.css',
     '/javascripts/jquery-3.3.1.slim.min.js',
