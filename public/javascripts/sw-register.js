@@ -1,13 +1,5 @@
-if ("serviceWorker" in navigator) {
-    if (navigator.serviceWorker.controller) {
-        console.log("[Vamos Crescer] active service worker found, no need to register");
-    } else {
-        navigator.serviceWorker
-            .register("/sw.js", {
-                scope: "../"
-            })
-            .then(function(reg) {
-                console.log("[Vamos Crescer] Service worker has been registered for scope: " + reg.scope);
-            });
-    }
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then(registration => console.log('ServiceWorker registration successful with scope: ', registration.scope))
+        .catch(err => console.log('ServiceWorker registration failed: ', err))
 }
