@@ -2,6 +2,17 @@ const CACHE = "vamoscrescer-page";
 
 const offlineFallbackPage = "ToDo-replace-this-name.html";
 
+let cached_assets = [
+    '/',
+    'index.html',
+    '/stylesheets/font-awesome.min.css',
+    '/stylesheets/style.css',
+    '/javascripts/jquery-3.3.1.slim.min.js',
+    'javascripts/popper.min.js',
+    'javascripts/bootstrap.min.js'
+];
+
+
 self.addEventListener("install", function(event) {
     console.log("[Vamos Crescer] Install Event processing");
 
@@ -13,7 +24,7 @@ self.addEventListener("install", function(event) {
                 return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
             }
 
-            return cache.add(offlineFallbackPage);
+            return cache.add(cached_assets);
         })
     );
 });
