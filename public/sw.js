@@ -6,9 +6,7 @@ var urlsToCache_ = [
     'login.html',
     '/stylesheets/font-awesome.min.css',
     '/stylesheets/style.css',
-    '/javascripts/jquery-3.3.1.slim.min.js',
-    'javascripts/popper.min.js',
-    'javascripts/bootstrap.min.js'
+    '/javascripts/jquery-3.3.1.slim.min.js'
 ];
 
 var version = 'v15';
