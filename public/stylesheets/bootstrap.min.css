@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
- :root {
+:root {
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -10263,8 +10263,8 @@ a.text-dark:hover {
 
 @media print {
     *,
-     ::after,
-     ::before {
+    ::after,
+    ::before {
         text-shadow: none!important;
         box-shadow: none!important
     }
@@ -10339,6 +10339,3 @@ a.text-dark:hover {
         border-color: #dee2e6
     }
 }
-
-
-/*# sourceMappingURL=bootstrap.min.css.map */
