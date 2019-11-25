@@ -20,9 +20,9 @@ self.addEventListener("install", function(event) {
         caches.open(CACHE).then(function(cache) {
             console.log("[Vamos Crescer] Cached offline page during install");
 
-            if (offlineFallbackPage === "ToDo-replace-this-name.html") {
-                return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
-            }
+            // if (offlineFallbackPage === "ToDo-replace-this-name.html") {
+            //     return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
+            // }
 
             return cache.add(cached_assets);
         })
