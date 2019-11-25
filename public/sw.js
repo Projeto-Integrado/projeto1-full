@@ -1,9 +1,5 @@
-const CACHE = "vamoscrescer-page";
-
-const offlineFallbackPage = "ToDo-replace-this-name.html";
-
-let cached_assets = [
-    '/',
+var urlsToCache_ = [
+    '/#/',
     '/stylesheets/font-awesome.min.css',
     '/stylesheets/style.css',
     '/javascripts/jquery-3.3.1.slim.min.js',
@@ -11,52 +7,42 @@ let cached_assets = [
     'javascripts/bootstrap.min.js'
 ];
 
+var version = 'v15';
 
-self.addEventListener("install", function(event) {
-    console.log("[Vamos Crescer] Install Event processing");
+self.addEventListener('install', function(event) {
+    console.log('[ServiceWorker] Installed version', version);
+    event.waitUntil(
+        caches.open(version)
+        .then(function(cache) {
+            console.log("opened cache");
+            return cache.addAll(urlsToCache_);
+        })
+    );
+});
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request).then(function(response) {
+            return response || fetch(event.request);
+        })
+    );
+});
+
+
+self.addEventListener('activate', function(event) {
+
+    var cacheWhitelist = [version];
 
     event.waitUntil(
-        caches.open(CACHE).then(function(cache) {
-            console.log("[Vamos Crescer] Cached offline page during install");
-
-            // if (offlineFallbackPage === "ToDo-replace-this-name.html") {
-            //     return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
-            // }
-
-            return cache.add(cached_assets);
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+                cacheNames.map(function(cacheName) {
+                    if (version && cacheWhitelist.indexOf(cacheName) === -1) {
+                        console.log('Deleted old cache');
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
         })
     );
-});
-
-// If any fetch fails, it will show the offline page.
-self.addEventListener("fetch", function(event) {
-    if (event.request.method !== "GET") return;
-
-    event.respondWith(
-        fetch(event.request).catch(function(error) {
-            // The following validates that the request was for a navigation to a new document
-            if (
-                event.request.destination !== "document" ||
-                event.request.mode !== "navigate"
-            ) {
-                return;
-            }
-
-            console.error("[Vamos Crescer] Network request Failed. Serving offline page " + error);
-            return caches.open(CACHE).then(function(cache) {
-                return cache.match(cached_assets);
-            });
-        })
-    );
-});
-
-self.addEventListener("refreshOffline", function() {
-    const offlinePageRequest = new Request(cached_assets);
-
-    return fetch(cached_assets).then(function(response) {
-        return caches.open(CACHE).then(function(cache) {
-            console.log("[Vamos Crescer] Offline page updated from refreshOffline event: " + response.url);
-            return cache.put(offlinePageRequest, response);
-        });
-    });
 });
