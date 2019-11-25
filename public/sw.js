@@ -45,16 +45,16 @@ self.addEventListener("fetch", function(event) {
 
             console.error("[Vamos Crescer] Network request Failed. Serving offline page " + error);
             return caches.open(CACHE).then(function(cache) {
-                return cache.match(offlineFallbackPage);
+                return cache.match(cached_assets);
             });
         })
     );
 });
 
 self.addEventListener("refreshOffline", function() {
-    const offlinePageRequest = new Request(offlineFallbackPage);
+    const offlinePageRequest = new Request(cached_assets);
 
-    return fetch(offlineFallbackPage).then(function(response) {
+    return fetch(cached_assets).then(function(response) {
         return caches.open(CACHE).then(function(cache) {
             console.log("[Vamos Crescer] Offline page updated from refreshOffline event: " + response.url);
             return cache.put(offlinePageRequest, response);
