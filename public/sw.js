@@ -14,11 +14,11 @@ var urlsToCache_ = [
 var version = 'v15';
 
 self.addEventListener('install', function(event) {
-    console.log('[ServiceWorker] Installed version', version);
+    console.log('[Vamos Crescer] - [ServiceWorker] Installed version', version);
     event.waitUntil(
         caches.open(version)
         .then(function(cache) {
-            console.log("opened cache");
+            console.log("[Vamos Crescer] opened cache");
             return cache.addAll(urlsToCache_);
         })
     );
@@ -42,7 +42,7 @@ self.addEventListener('activate', function(event) {
             return Promise.all(
                 cacheNames.map(function(cacheName) {
                     if (version && cacheWhitelist.indexOf(cacheName) === -1) {
-                        console.log('Deleted old cache');
+                        console.log('[Vamos Crescer] Deleted old cache');
                         return caches.delete(cacheName);
                     }
                 })
