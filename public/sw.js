@@ -11,7 +11,7 @@ var urlsToCache_ = [
     'javascripts/bootstrap.min.js'
 ];
 
-var version = 'v15';
+var version = 'v16';
 
 self.addEventListener('install', function(event) {
     console.log('[Vamos Crescer] - [ServiceWorker] Installed version', version);
