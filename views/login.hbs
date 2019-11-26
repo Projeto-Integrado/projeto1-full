@@ -1,10 +1,120 @@
-    <div class="container-fluid mt-5 mb-5">
-        <section class="pt-5">
-            <div class="container text-center">
-                <h1 class="display-4">login</h1>
+<div class="container-fluid mt-5 mb-5">
+    <section class="pt-5">
+        <div class="container text-center">
+            <div class="container">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Login</h3>
+                            <h6>PIA - PUC MINAS</h6>
+                            <div class="d-flex justify-content-end social_icon">
+                                <span><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form id="formlogin">
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control" id="inputEmail-js" placeholder="e-mail"
+                                        required>
+
+                                </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input type="password" class="form-control" id="inputSenha-js" placeholder="senha"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Login" class="btn float-right login_btn btn-login-js">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center links">
+                                Não tem uma conta?<a class="cadastroJS" href="#">Inscrever-se</a>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a class="senhaJS" href="#">Esqueceu sua senha?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade modal-cadastro" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="cadastro-user-js">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Nome:</label>
+                                            <input type="text" class="form-control" id="recipient-name" required>
+                                            <label for="recipient-email" class="col-form-label">Email:</label>
+                                            <input type="text" class="form-control" id="recipient-email" required>
+                                            <label for="recipient-senha" class="col-form-label">Senha:</label>
+                                            <input type="password" class="form-control" id="recipient-senha" required>
+                                            <label for="recipient-confirm-senha" class="col-form-label">Confirmar
+                                                Senha:</label>
+                                            <input type="password" class="form-control" id="recipient-confirm-senha"
+                                                required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fechar</button>
+                                            <button type="submit"
+                                                class="btn btn-primary btn-cadastro-js">Cadastrar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade modal-senha" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="text-center">
+                                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                        <h2 class="text-center">Você esqueceu sua senha?</h2>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="esqueceu-senha-js">
+                                        <div class="form-group">
+                                            <label for="campo-email" class="col-form-label">Email:</label>
+                                            <input type="text" class="form-control" id="campo-email" required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fechar</button>
+                                            <button type="submit"
+                                                class="btn btn-primary btn-env-senha-js">Enviar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
-    <section class="bg-light mt-5 py-5">
-      {{> footer}}
     </section>
+</div>
+<section class="bg-light mt-5 py-5">
+    {{> footer}}
+</section>
