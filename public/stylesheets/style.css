@@ -12,6 +12,10 @@ input {
     font-family: Gugi, cursive;
 }
 
+.lista-padrao {
+    list-style-type: none;
+}
+
 .nav-item {
     padding-top: 0px;
     padding-right: 16px;
